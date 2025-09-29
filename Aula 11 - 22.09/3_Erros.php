@@ -5,7 +5,7 @@ private $nomeDisciplina; private $cargaHoraria; private $professor; private $per
 private $notaFinal; private $presenca;
 
 public function 	construct($nomeDisciplina, $cargaHoraria, $professor, $periodo,
-$notaInicial, $presenca) {
+$notaFinal, $presenca) {
 $this->nomeDisciplina = $nomeDisciplina;
 $this->cargaHoraria = $cargaHoraria;
 $this->professor = $professor;
@@ -14,15 +14,16 @@ $this->notaFinal = $notaFinal;
 $this->presenca = $presenca;
 }
 
-// Métodos de verificação public function aprovado() {
-return $this->notaFinal >= 6;
+// Métodos de verificação
+public function aprovado() {
+	return $this->notaFinal >= 6;
 }
 
 public function presencaValida() { return $this->presenca >= 60;
 }
 
 public function situacaoFinal() {
-return ($this->aprovado() && $this->presencaValida()) @ "Aprovado" : "Reprovado";
+return ($this->aprovado() && $this->presencaValida()) ? "Aprovado" : "Reprovado";
 }
 
 // Método resumo

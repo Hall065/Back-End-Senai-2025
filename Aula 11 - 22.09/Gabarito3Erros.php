@@ -7,8 +7,8 @@ class Disciplinas {
     private $notaFinal;
     private $presenca;
 
-    // Variavel errada no construtor -> $notaInicial ao inves de $notaFinal
-    public function __construct($nomeDisciplina, $cargaHoraria, $professor, $periodo, $notaInicial, $presenca) {
+    // Corrigido: parâmetro correto é $notaFinal
+    public function __construct($nomeDisciplina, $cargaHoraria, $professor, $periodo, $notaFinal, $presenca) {
         $this->nomeDisciplina = $nomeDisciplina;
         $this->cargaHoraria = $cargaHoraria;
         $this->professor = $professor;
@@ -16,7 +16,6 @@ class Disciplinas {
         $this->notaFinal = $notaFinal;
         $this->presenca = $presenca;
     }
-
     // Métodos de verificação
     public function aprovado() {
         return $this->notaFinal >= 6;
@@ -28,7 +27,7 @@ class Disciplinas {
 
     // Operador Ternario incorreto -> @ ao inves de ?
     public function situacaoFinal() {
-        return ($this->aprovado() && $this->presencaValida()) @ "Aprovado" : "Reprovado";
+        return ($this->aprovado() && $this->presencaValida()) ? "Aprovado" : "Reprovado";
     }
 
     // Método resumo

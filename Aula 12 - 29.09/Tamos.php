@@ -217,7 +217,7 @@ echo $eletro3->desligarDispositivo();
 echo $eletro3->exibirDados();
 
 echo "\n\n----LIQUIDIFICADOR----";
-$eletro4 = new Liquidificador("Liquidificador", "Mondial", 300, true, 127, 189.90, "Tubo", "Rosa");
+$eletro4 = new Liquidificador("Liquidificador", "Mondial", 300, true, 127, 189.90, "Turbo", "Rosa");
 echo $eletro4->ligarDispositivo();
 echo $eletro4->desligarDispositivo();
 echo $eletro4->exibirDados();

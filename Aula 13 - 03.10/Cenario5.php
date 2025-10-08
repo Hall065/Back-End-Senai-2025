@@ -44,6 +44,7 @@ class Narrador {
     public function contarHistoria($personagens, $verbos, $lugar, $acoes, $objetos) {
         // Junta personagens
         $nomesPersonagens = implode(", ", array_slice($personagens, 0, -1)) . " e " . end($personagens);
+
         // Junta objetos
         $nomesObjetos = implode(", ", array_slice($objetos, 0, -1)) . " e " . end($objetos);
 

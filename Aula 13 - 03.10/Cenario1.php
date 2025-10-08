@@ -31,8 +31,9 @@ class Narrador {
     public function contarHistoria($personagens, $verbos, $lugares) {
         // Junta personagens
         $nomesPersonagens = implode(", ", array_slice($personagens, 0, -1)) . " e " . end($personagens);
-        // Junta lugares
+        // Junta Lugares
         $nomesLugares = implode(", ", array_slice($lugares, 0, -1)) . " e " . end($lugares);
+
 
         echo "Um grupo de turistas ($nomesPersonagens) vai {$verbos[0]} o $nomesLugares. ";
         echo "Em cada lugar da Terra, eles poderão {$verbos[1]} comidas típicas e {$verbos[2]} em rios ou praias.";

@@ -1,0 +1,32 @@
+[
+    {
+        "id": 2,
+        "name": "Viper A.",
+        "curso": "Design Gr\u00e1fico"
+    },
+    {
+        "id": 3,
+        "name": "Zeny",
+        "curso": "Marketing"
+    },
+    {
+        "id": 4,
+        "name": "Aurora",
+        "curso": "Arquitetura"
+    },
+    {
+        "id": 5,
+        "name": "Oliver",
+        "curso": "Eletrica"
+    },
+    {
+        "id": 8,
+        "name": "Joana",
+        "curso": "Eletrica"
+    },
+    {
+        "id": 9,
+        "name": "Miguel",
+        "curso": "Design"
+    }
+]

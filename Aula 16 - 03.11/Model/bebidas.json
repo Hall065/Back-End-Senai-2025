@@ -1,0 +1,44 @@
+[
+    {
+        "nome": "Coca-Cola",
+        "preco": "R$ 12,49",
+        "volume": "3L",
+        "qntd": 335,
+        "categoria": "Refrigerante"
+    },
+    {
+        "nome": "Pepsi Twist",
+        "preco": "R$ 5,00",
+        "volume": "200ml",
+        "qntd": 500,
+        "categoria": "Refrigerante"
+    },
+    {
+        "nome": "Tubaina",
+        "preco": "R$ 6,50",
+        "volume": "600ml",
+        "qntd": 875,
+        "categoria": "Refrigerante"
+    },
+    {
+        "nome": "Cerveja Budweiser",
+        "preco": "R$ 6,50",
+        "volume": "400ml",
+        "qntd": 560,
+        "categoria": "Alco\u00f3lica"
+    },
+    {
+        "nome": "Heineken",
+        "preco": "R$ 7,50",
+        "volume": "350ml",
+        "qntd": 1040,
+        "categoria": "Alco\u00f3lica"
+    },
+    {
+        "nome": "Energ\u00e9tico Monster",
+        "preco": "R$ 11,00",
+        "volume": "400ml",
+        "qntd": 499,
+        "categoria": "Energ\u00e9tico"
+    }
+]

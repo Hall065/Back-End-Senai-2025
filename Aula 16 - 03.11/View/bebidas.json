@@ -26,5 +26,12 @@
         "volume": "500ml",
         "valor": 3.5,
         "qtde": 100
+    },
+    "Coca-Cola": {
+        "nome": "Coca-Cola",
+        "categoria": "Refrigerante",
+        "volume": "3L",
+        "valor": "27.90",
+        "qtde": "200"
     }
 }

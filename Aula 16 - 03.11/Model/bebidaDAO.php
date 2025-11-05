@@ -52,7 +52,7 @@ class BebidaDAO {
         
         // UPDATE 
         public function atualizarBebida($nome, $novoValor, $novaQtde){
-            if(isset($this->bebidasArray[$nome])){
+            if(isset($this->bebidasArray[$nome])){-
                 $this->bebidasArray[$nome]->setValor($novoValor);
                 $this->bebidasArray[$nome]->setQtde($novaQtde);
             }

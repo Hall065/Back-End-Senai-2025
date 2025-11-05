@@ -1,58 +1,117 @@
 <?php
-// bebidasCRUD.php -> bebidas.php é CRUD.
-// Classe Bebida
 
 class Bebida {
-    // Propriedades
     private $nome;
-    private $preco;
-    private $volume;
-    private $qntd;
     private $categoria;
+    private $volume;
+    private $valor;
+    private $qtde;
 
-    // Construtor
-    public function __construct($nome, $preco, $volume, $qntd, $categoria) {
+    public function __construct($nome, $categoria, $volume, $valor, $qtde){
         $this->nome = $nome;
-        $this->preco = $preco;
-        $this->volume = $volume;
-        $this->qntd = $qntd;
         $this->categoria = $categoria;
+        $this->volume = $volume;
+        $this->valor = $valor;
+        $this->qtde = $qtde;
     }
 
-    // Getters e Setters
-    public function getNome() {
+    /**
+     * Get the value of valor
+     */ 
+    public function getValor()
+    {
+        return $this->valor;
+    }
+
+    /**
+     * Set the value of valor
+     *
+     * @return  self
+     */ 
+    public function setValor($valor)
+    {
+        $this->valor = $valor;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of nome
+     */ 
+    public function getNome()
+    {
         return $this->nome;
     }
 
-    public function setNome($nome) {
+    /**
+     * Set the value of nome
+     *
+     * @return  self
+     */ 
+    public function setNome($nome)
+    {
         $this->nome = $nome;
+
+        return $this;
     }
 
-    public function getPreco() {
-        return $this->preco;
+    /**
+     * Get the value of categoria
+     */ 
+    public function getCategoria()
+    {
+        return $this->categoria;
     }
 
-    public function setPreco($preco) {
-        $this->preco = $preco;
+    /**
+     * Set the value of categoria
+     *
+     * @return  self
+     */ 
+    public function setCategoria($categoria)
+    {
+        $this->categoria = $categoria;
+
+        return $this;
     }
 
-    public function getVolume() {
+    /**
+     * Get the value of volume
+     */ 
+    public function getVolume()
+    {
         return $this->volume;
     }
 
-    public function setVolume($volume) {
+    /**
+     * Set the value of volume
+     *
+     * @return  self
+     */ 
+    public function setVolume($volume)
+    {
         $this->volume = $volume;
+
+        return $this;
     }
-    public function getQntd() {
-        return $this->qntd;
+
+    /**
+     * Get the value of qtde
+     */ 
+    public function getQtde()
+    {
+        return $this->qtde;
     }
-    public function setQntd($qntd) {
-        $this->qntd = $qntd;
-    }
-    public function getCategoria() {
-        return $this->categoria;
-    }
-    public function setCategoria($categoria) {
-        $this->categoria = $categoria;
+
+    /**
+     * Set the value of qtde
+     *
+     * @return  self
+     */ 
+    public function setQtde($qtde)
+    {
+        $this->qtde = $qtde;
+
+        return $this;
     }
 }

@@ -1,0 +1,79 @@
+{
+    "Honda Civic": {
+        "nome": "Honda Civic",
+        "categoria": "Sedan",
+        "motor": "2.0",
+        "valor": 135000,
+        "qtde": 5
+    },
+    "Toyota Corolla": {
+        "nome": "Toyota Corolla",
+        "categoria": "Sedan",
+        "motor": "2.0",
+        "valor": 150000,
+        "qtde": 4
+    },
+    "Jeep Compass": {
+        "nome": "Jeep Compass",
+        "categoria": "SUV",
+        "motor": "1.3 Turbo",
+        "valor": 180000,
+        "qtde": 6
+    },
+    "Chevrolet Onix": {
+        "nome": "Chevrolet Onix",
+        "categoria": "Hatch",
+        "motor": "1.0 Turbo",
+        "valor": 93000,
+        "qtde": 10
+    },
+    "Tesla Model 3": {
+        "nome": "Tesla Model 3",
+        "categoria": "El\u00e9trico",
+        "motor": "El\u00e9trico",
+        "valor": 280000,
+        "qtde": 2
+    },
+    "Ford Ranger": {
+        "nome": "Ford Ranger",
+        "categoria": "Picape",
+        "motor": "3.2 Diesel",
+        "valor": 230000,
+        "qtde": 3
+    },
+    "Porsche 911": {
+        "nome": "Porsche 911",
+        "categoria": "Esportivo",
+        "motor": "3.0 Turbo",
+        "valor": 1200000,
+        "qtde": 1
+    },
+    "Volkswagen T-Cross": {
+        "nome": "Volkswagen T-Cross",
+        "categoria": "SUV",
+        "motor": "1.4 TSI",
+        "valor": 145000,
+        "qtde": 7
+    },
+    "Chevrolet S10": {
+        "nome": "Chevrolet S10",
+        "categoria": "Picape",
+        "motor": "2.8 Diesel",
+        "valor": 220000,
+        "qtde": 4
+    },
+    "Fiat Mobi": {
+        "nome": "Fiat Mobi",
+        "categoria": "Hatch",
+        "motor": "1.0",
+        "valor": 62000,
+        "qtde": 12
+    },
+    "BMW 328i": {
+        "nome": "BMW 328i",
+        "categoria": "Esportivo",
+        "motor": "2.0 Turbo",
+        "valor": "200.000",
+        "qtde": "1"
+    }
+}

@@ -15,103 +15,20 @@ class Bebida {
         $this->qtde = $qtde;
     }
 
-    /**
-     * Get the value of valor
-     */ 
-    public function getValor()
-    {
-        return $this->valor;
-    }
+    // GETTERS e SETTERS
+    public function getNome() { return $this->nome; }
+    public function setNome($nome) { $this->nome = $nome; return $this; }
 
-    /**
-     * Set the value of valor
-     *
-     * @return  self
-     */ 
-    public function setValor($valor)
-    {
-        $this->valor = $valor;
+    public function getCategoria() { return $this->categoria; }
+    public function setCategoria($categoria) { $this->categoria = $categoria; return $this; }
 
-        return $this;
-    }
+    public function getVolume() { return $this->volume; }
+    public function setVolume($volume) { $this->volume = $volume; return $this; }
 
-    /**
-     * Get the value of nome
-     */ 
-    public function getNome()
-    {
-        return $this->nome;
-    }
+    public function getValor() { return $this->valor; }
+    public function setValor($valor) { $this->valor = $valor; return $this; }
 
-    /**
-     * Set the value of nome
-     *
-     * @return  self
-     */ 
-    public function setNome($nome)
-    {
-        $this->nome = $nome;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of categoria
-     */ 
-    public function getCategoria()
-    {
-        return $this->categoria;
-    }
-
-    /**
-     * Set the value of categoria
-     *
-     * @return  self
-     */ 
-    public function setCategoria($categoria)
-    {
-        $this->categoria = $categoria;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of volume
-     */ 
-    public function getVolume()
-    {
-        return $this->volume;
-    }
-
-    /**
-     * Set the value of volume
-     *
-     * @return  self
-     */ 
-    public function setVolume($volume)
-    {
-        $this->volume = $volume;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of qtde
-     */ 
-    public function getQtde()
-    {
-        return $this->qtde;
-    }
-
-    /**
-     * Set the value of qtde
-     *
-     * @return  self
-     */ 
-    public function setQtde($qtde)
-    {
-        $this->qtde = $qtde;
-
-        return $this;
-    }
+    public function getQtde() { return $this->qtde; }
+    public function setQtde($qtde) { $this->qtde = $qtde; return $this; }
 }
+?>

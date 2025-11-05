@@ -1,0 +1,30 @@
+{
+    "Guaran\u00e1 Ant\u00e1rtica": {
+        "nome": "Guaran\u00e1 Ant\u00e1rtica",
+        "categoria": "Refrigerante",
+        "volume": "1,5L",
+        "valor": 10,
+        "qtde": 30
+    },
+    "Heineken": {
+        "nome": "Heineken",
+        "categoria": "Cerveja",
+        "volume": "600ml",
+        "valor": 8.5,
+        "qtde": 40
+    },
+    "Suco de Laranja": {
+        "nome": "Suco de Laranja",
+        "categoria": "Suco",
+        "volume": "1L",
+        "valor": 7,
+        "qtde": 25
+    },
+    "\u00c1gua Mineral": {
+        "nome": "\u00c1gua Mineral",
+        "categoria": "\u00c1gua",
+        "volume": "500ml",
+        "valor": 3.5,
+        "qtde": 100
+    }
+}

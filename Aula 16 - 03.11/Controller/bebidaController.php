@@ -5,32 +5,28 @@ require_once __DIR__ . '/../Model/Bebida.php';
 class BebidaController {
     private $dao;
 
-    // Construtor: cria o objeto DAO (responsável por salvar/carregar)
+    // Construtor: cria o objeto DAO responsável por manipular os dados
     public function __construct() {
         $this->dao = new BebidaDAO();
     }
 
-    // Lista todas as bebidas
+    // Retorna todas as bebidas cadastradas
     public function ler() {
         return $this->dao->lerBebidas();
     }
 
-    // Cadastra nova bebida
+    // Cria uma nova bebida e salva no JSON
     public function criar($nome, $categoria, $volume, $valor, $qtde) {
-
-        // // Gera ID automaticamente com base no timestamp (exemplo simples)
-        // $id = time(); // Função caso o objeto tenha um atributo de ID
-
-        $bebida = new Bebida( $nome, $categoria, $volume, $valor, $qtde);
+        $bebida = new Bebida($nome, $categoria, $volume, $valor, $qtde);
         $this->dao->criarBebida($bebida);
     }
 
-    // Atualiza bebida existente
-    public function atualizar( $nome, $valor, $qtde) {
-        $this->dao->atualizarBebida( $nome, $valor, $qtde);
+    // Atualiza valor e quantidade de uma bebida existente
+    public function atualizar($nome, $valor, $qtde) {
+        $this->dao->atualizarBebida($nome, $valor, $qtde);
     }
 
-    // Exclui bebida
+    // Remove uma bebida pelo nome
     public function deletar($nome) {
         $this->dao->excluirBebida($nome);
     }

@@ -7,28 +7,28 @@ class Bebida {
     private $valor;
     private $qtde;
 
-    public function __construct($nome, $categoria, $volume, $valor, $qtde){
+    public function __construct($nome, $categoria, $volume, $valor, $qtde) {
         $this->nome = $nome;
         $this->categoria = $categoria;
         $this->volume = $volume;
-        $this->valor = $valor;
-        $this->qtde = $qtde;
+        $this->valor = (float)$valor;
+        $this->qtde = (int)$qtde;
     }
 
     // GETTERS e SETTERS
     public function getNome() { return $this->nome; }
-    public function setNome($nome) { $this->nome = $nome; return $this; }
+    public function setNome($nome) { $this->nome = $nome; }
 
     public function getCategoria() { return $this->categoria; }
-    public function setCategoria($categoria) { $this->categoria = $categoria; return $this; }
+    public function setCategoria($categoria) { $this->categoria = $categoria; }
 
     public function getVolume() { return $this->volume; }
-    public function setVolume($volume) { $this->volume = $volume; return $this; }
+    public function setVolume($volume) { $this->volume = $volume; }
 
     public function getValor() { return $this->valor; }
-    public function setValor($valor) { $this->valor = $valor; return $this; }
+    public function setValor($valor) { $this->valor = (float)$valor; }
 
     public function getQtde() { return $this->qtde; }
-    public function setQtde($qtde) { $this->qtde = $qtde; return $this; }
+    public function setQtde($qtde) { $this->qtde = (int)$qtde; }
 }
 ?>

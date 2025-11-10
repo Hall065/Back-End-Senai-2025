@@ -1,17 +1,10 @@
 {
-    "Guaran\u00e1 Ant\u00e1rtica": {
-        "nome": "Guaran\u00e1 Ant\u00e1rtica",
+    "Guaraná Antártica": {
+        "nome": "Guaraná Antártica",
         "categoria": "Refrigerante",
         "volume": "1,5L",
         "valor": 10,
         "qtde": 30
-    },
-    "Heineken": {
-        "nome": "Heineken",
-        "categoria": "Cerveja",
-        "volume": "600ml",
-        "valor": 8.5,
-        "qtde": 40
     },
     "Suco de Laranja": {
         "nome": "Suco de Laranja",
@@ -20,18 +13,25 @@
         "valor": 7,
         "qtde": 25
     },
-    "\u00c1gua Mineral": {
-        "nome": "\u00c1gua Mineral",
-        "categoria": "\u00c1gua",
+    "Água Mineral": {
+        "nome": "Água Mineral",
+        "categoria": "Água",
         "volume": "500ml",
         "valor": 3.5,
         "qtde": 100
     },
-    "Coca-Cola": {
-        "nome": "Coca-Cola",
-        "categoria": "Refrigerante",
-        "volume": "3L",
-        "valor": "27.90",
-        "qtde": "200"
+    "Monster": {
+        "nome": "Monster",
+        "categoria": "Energético",
+        "volume": "400ml",
+        "valor": 11,
+        "qtde": 250
+    },
+    "Chopp": {
+        "nome": "Chopp",
+        "categoria": "Cerveja",
+        "volume": "800ml",
+        "valor": 51.99,
+        "qtde": 50
     }
 }

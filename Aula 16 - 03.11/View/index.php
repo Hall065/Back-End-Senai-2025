@@ -2,13 +2,24 @@
 require_once __DIR__ . '/../controller/BebidaController.php';
 
 $controller = new BebidaController();
+$editando = false;
+$bebidaEdicao = null;
 
-// Ações do formulário
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if ($_POST['acao'] === 'criar') {
-        $controller->criar($_POST['nome'], $_POST['categoria'], $_POST['volume'], $_POST['valor'], $_POST['qtde']);
-    } elseif ($_POST['acao'] === 'deletar') {
-        $controller->deletar($_POST['nome']);
+    switch ($_POST['acao']) {
+        case 'criar':
+            $controller->criar($_POST['nome'], $_POST['categoria'], $_POST['volume'], $_POST['valor'], $_POST['qtde']);
+            break;
+        case 'deletar':
+            $controller->deletar($_POST['nome']);
+            break;
+        case 'editar':
+            $editando = true;
+            $bebidaEdicao = $controller->buscar($_POST['nome']);
+            break;
+        case 'atualizar':
+            $controller->atualizar($_POST['nome_antigo'], $_POST['nome'], $_POST['categoria'], $_POST['volume'], $_POST['valor'], $_POST['qtde']);
+            break;
     }
 }
 
@@ -34,33 +45,51 @@ $lista = $controller->ler();
         tr:nth-child(even){ background-color: #f9f9f9; }
         .delete-btn { background-color: #f44336; }
         .delete-btn:hover { background-color: #d32f2f; }
+        .edit-btn { background-color: #2196F3; }
+        .edit-btn:hover { background-color: #0b7dda; }
     </style>
 </head>
 <body>
 
 <h1>Gerenciamento de Bebidas</h1>
 
-<!-- Formulário para criar bebida -->
 <form method="POST">
-    <input type="hidden" name="acao" value="criar">
-    <input type="text" name="nome" placeholder="Nome da bebida:" required>
+    <input type="hidden" name="acao" value="<?= $editando ? 'atualizar' : 'criar' ?>">
+
+    <?php if ($editando): ?>
+        <input type="hidden" name="nome_antigo" value="<?= htmlspecialchars($bebidaEdicao->getNome()) ?>">
+    <?php endif; ?>
+
+    <input type="text" name="nome" placeholder="Nome da bebida:" required
+           value="<?= $editando ? htmlspecialchars($bebidaEdicao->getNome()) : '' ?>">
+
     <select name="categoria" required>
         <option value="">Selecione a categoria</option>
-        <option value="Refrigerante">Refrigerante</option>
-        <option value="Cerveja">Cerveja</option>
-        <option value="Vinho">Vinho</option>
-        <option value="Destilado">Destilado</option>
-        <option value="Água">Água</option>
-        <option value="Suco">Suco</option>
-        <option value="Energético">Energético</option>
+        <?php
+        $categorias = ["Refrigerante","Cerveja","Vinho","Destilado","Água","Suco","Energético"];
+        foreach ($categorias as $cat) {
+            $selected = ($editando && $bebidaEdicao->getCategoria() === $cat) ? 'selected' : '';
+            echo "<option value='$cat' $selected>$cat</option>";
+        }
+        ?>
     </select>
-    <input type="text" name="volume" placeholder="Volume (ex: 300ml):" required>
-    <input type="number" name="valor" step="0.01" placeholder="Valor em R$:" required>
-    <input type="number" name="qtde" placeholder="Quantidade em estoque:" required>
-    <button type="submit">Cadastrar</button>
+
+    <input type="text" name="volume" placeholder="Volume (ex: 300ml)" required
+           value="<?= $editando ? htmlspecialchars($bebidaEdicao->getVolume()) : '' ?>">
+
+    <input type="number" name="valor" step="0.01" placeholder="Valor em R$" required
+           value="<?= $editando ? htmlspecialchars($bebidaEdicao->getValor()) : '' ?>">
+
+    <input type="number" name="qtde" placeholder="Quantidade em estoque" required
+           value="<?= $editando ? htmlspecialchars($bebidaEdicao->getQtde()) : '' ?>">
+
+    <button type="submit"><?= $editando ? 'Atualizar' : 'Cadastrar' ?></button>
+
+    <?php if ($editando): ?>
+        <a href="index.php" style="margin-left:10px; text-decoration:none; color:#555;">Cancelar</a>
+    <?php endif; ?>
 </form>
 
-<!-- Tabela de bebidas -->
 <table>
     <tr>
         <th>Nome</th>
@@ -75,9 +104,14 @@ $lista = $controller->ler();
         <td><?= htmlspecialchars($bebida->getNome()) ?></td>
         <td><?= htmlspecialchars($bebida->getCategoria()) ?></td>
         <td><?= htmlspecialchars($bebida->getVolume()) ?></td>
-        <td><?= number_format($bebida->getValor(), 2, ',', '.') ?></td>
+        <td><?= number_format((float)$bebida->getValor(), 2, ',', '.') ?></td>
         <td><?= htmlspecialchars($bebida->getQtde()) ?></td>
         <td>
+            <form method="POST" style="display:inline;">
+                <input type="hidden" name="acao" value="editar">
+                <input type="hidden" name="nome" value="<?= htmlspecialchars($bebida->getNome()) ?>">
+                <button type="submit" class="edit-btn">Editar</button>
+            </form>
             <form method="POST" style="display:inline;">
                 <input type="hidden" name="acao" value="deletar">
                 <input type="hidden" name="nome" value="<?= htmlspecialchars($bebida->getNome()) ?>">
